@@ -1,0 +1,44 @@
+oop design anti patterns ???
+1. God Object (Blob)
+A class that knows too much or does too much.
+ It violates the Single Responsibility Principle (SRP) and makes the system hard to maintain.
+
+public class GodObject {
+    public void SaveToDatabase() { /* ... */ }
+    public void RenderUI() { /* ... */ }
+    public void CalculateStatistics() { /* ... */ }
+    // and many more unrelated methods...
+}
+
+Solution:
+
+Refactor the class by separating responsibilities into smaller, more focused classes.
+
+2. Spaghetti Code
+Code with a complex and tangled control structure, making it difficult to follow and maintain.
+
+Symptoms:
+
+Code has many nested conditionals and loops.
+Functions and classes are interconnected in complex ways.
+
+
+public void Process() {
+    if (condition1) {
+        // do something
+        if (condition2) {
+            // do something else
+            while (condition3) {
+                // nested loop with more conditions
+            }
+        }
+    }
+}
+
+Use proper design patterns and principles like SRP,
+ DRY (Don't Repeat Yourself), and modularization to simplify the control flow.
+
+
+ 3. Lava Flow
+Code that is hard to remove because it has become part of the system's structure,
+ often leftover from previous versions or prototypes.
